@@ -32,7 +32,7 @@ const server = http.createServer(app)
 const io = new Server(server, { cors: { origin: '*', credentials: true } })
 
 app.set('trust proxy', 1)
-app.use(cors({ origin: true, credentials: true }))
+app.use(cors({ origin:  ["https://smart-waste-management-frontend.onrender.com"], credentials: true }))
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
